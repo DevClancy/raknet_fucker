@@ -24,4 +24,11 @@ except:
 
 ip = input(Fore.CYAN + "\nEnter IP: ")
 port = input(Fore.CYAN + "Enter PORT: ")
+threads = int(input(Fore.CYAN + "Enter THREADS: "))
+
+message1 = codecs.decode("081e77da","hex_codec")
+message2 = codecs.decode("081e7eda","hex_codec")
+message3 = codecs.decode("081e77da","hex_codec")
+
+messages = [message1, message2, message3]
 
