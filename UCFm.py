@@ -32,5 +32,6 @@ ip = input(Fore.CYAN + "\nEnter IP: ")
 port = input(Fore.CYAN + "Enter PORT: ")
 threads = int(input(Fore.CYAN + "Enter THREADS: "))
 
-
+def attack():
+	pass
 
