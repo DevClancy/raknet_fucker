@@ -42,10 +42,10 @@ threads = int(input(Fore.CYAN + "Enter THREADS: "))
 def info_print(sent, errors):
 	try:
 		os.system("cls")
-		print(Fore.RED + "Sent: " + sent + Fore.RED + "Errors: " + errors)
+		print(Fore.RED + "Sent: " + str(sent) + Fore.RED + "Errors: " + str(errors))
 	except:
 		os.system("clear")
-		print(Fore.RED + "Sent: " + sent + Fore.RED + "Errors: " + errors)
+		print(Fore.RED + "Sent: " + str(sent) + Fore.RED + "Errors: " + str(errors))
 
 def attack():
 	sent = 0
