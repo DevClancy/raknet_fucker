@@ -40,8 +40,13 @@ port = input(Fore.CYAN + "Enter PORT: ")
 threads = int(input(Fore.CYAN + "Enter THREADS: "))
 
 def attack():
-	
-
+	with open(r"socks5.txt", "r") as file:
+		for line in file:
+			try:
+				pass
+			except:
+				pass
+			
 for o in range(threads):
 	main_thread = threading.Thread(target = attack)
 	main_thread.start()
