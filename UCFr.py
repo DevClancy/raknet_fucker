@@ -39,14 +39,13 @@ ip = input(Fore.CYAN + "\nEnter IP: ")
 port = input(Fore.CYAN + "Enter PORT: ")
 threads = int(input(Fore.CYAN + "Enter THREADS: "))
 
-def info():
-	while True():
-		try:
-			os.system("cls")
-			print(Fore.RED + "Sent: " + sent + Fore.RED + "Errors: " + error)
-		except:
-			os.system("clear")
-			print(Fore.RED + "Sent: " + sent + Fore.RED + "Errors: " + error)
+def info_print(sent, errors):
+	try:
+		os.system("cls")
+		print(Fore.RED + "Sent: " + sent + Fore.RED + "Errors: " + errors)
+	except:
+		os.system("clear")
+		print(Fore.RED + "Sent: " + sent + Fore.RED + "Errors: " + errors)
 
 def attack():
 	with open(r"socks5.txt", "r") as file:
