@@ -48,6 +48,8 @@ def info_print(sent, errors):
 		print(Fore.RED + "Sent: " + sent + Fore.RED + "Errors: " + errors)
 
 def attack():
+	sent = 0
+	errors = 0
 	with open(r"socks5.txt", "r") as file:
 		for line in file:
 			try:
@@ -64,11 +66,16 @@ def attack():
 				
 				sent += 1
 				
-				info_print(sent)
+				info_print(sent, errors)
 			except:
 				errors += 1
-				info_print(errors)
-			
+				info_print(errors, sent)
+
+try:
+	os.system("clear")
+except:
+	os.system("cls")
+												
 for o in range(threads):
 	main_thread = threading.Thread(target = attack)
 	main_thread.start()
