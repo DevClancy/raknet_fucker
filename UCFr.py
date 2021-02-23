@@ -38,3 +38,7 @@ threads = int(input(Fore.CYAN + "Enter THREADS: "))
 
 def attack():
 	pass
+
+for o in range(threads):
+	main_thread = threading.Thread(target = attack)
+	main_thread.start()
