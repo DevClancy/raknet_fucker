@@ -42,10 +42,10 @@ threads = int(input(Fore.CYAN + "Enter THREADS: "))
 def info_print(sent, errors):
 	try:
 		os.system("cls")
-		print(Fore.RED + "Sent: " + str(sent) + Fore.RED + "Errors: " + str(errors))
+		print(Fore.GREEN + "Sent: " + str(sent) + " " + Fore.RED + "Errors: " + str(errors))
 	except:
 		os.system("clear")
-		print(Fore.RED + "Sent: " + str(sent) + Fore.RED + "Errors: " + str(errors))
+		print(Fore.GREEN + "Sent: " + str(sent) + " " + Fore.RED + "Errors: " + str(errors))
 
 def attack():
 	sent = 0
@@ -69,12 +69,12 @@ def attack():
 				info_print(sent, errors)
 			except:
 				errors += 1
-				info_print(errors, sent)
+				info_print(sent, errors)
 
 try:
-	os.system("clear")
-except:
 	os.system("cls")
+except:
+	os.system("clear")
 												
 for o in range(threads):
 	main_thread = threading.Thread(target = attack)
