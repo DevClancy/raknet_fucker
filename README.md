@@ -1,5 +1,5 @@
 # RakNet Exploit 
-A exploit for RakNet
+Exploit for RakNet
 
 ## Todo
 
