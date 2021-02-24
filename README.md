@@ -7,6 +7,7 @@ Exploit for RakNet
 * [x] Proxy
 * [x] Multi-Threading
 * [ ] Custom Proxy
+* [ ] Auto Update
 
 ## Known bugs
 
