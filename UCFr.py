@@ -44,12 +44,16 @@ threads = int(input(Fore.CYAN + "Enter THREADS: "))
 
 def info_print(sent, errors):
 	try:
-		os.system("cls")
 		print(Fore.GREEN + "Sent: " + str(sent) + " " + Fore.RED + "Errors: " + str(errors))
 	except:
-		os.system("clear")
 		print(Fore.GREEN + "Sent: " + str(sent) + " " + Fore.RED + "Errors: " + str(errors))
 
+def cleaner():
+	if os.name == "nt":
+		os.system("cls")
+	else:
+		os.system("clear")
+		
 def attack():
 	global sent
 	global errors
@@ -69,14 +73,16 @@ def attack():
 				
 				sent += 1
 				
+				cleaner()
 				info_print(sent, errors)
 			except:
 				errors += 1
+				cleaner()
 				info_print(sent, errors)
 
-try:
+if os.name == "nt":
 	os.system("cls")
-except:
+else:
 	os.system("clear")
 												
 for o in range(threads):
