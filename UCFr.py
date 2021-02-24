@@ -12,7 +12,7 @@ try:
 	from colorama import init
 	from colorama import Fore, Back, Style
 except:
-	print(Fore.RED + "[Modules]")
+	print(Fore.RED + "[Modules] xuy")
 	
 sent = 0
 errors = 0
