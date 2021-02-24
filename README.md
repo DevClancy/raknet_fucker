@@ -1,3 +1,19 @@
-# RakNet Exploit
+# RakNet Exploit 
+A exploit for RakNet
 
-Beta 
+## Todo
+
+* [x] Crash Packets
+* [x] Proxy
+* [x] Multi-Threading
+* [ ] Custom Proxy
+
+## Known bugs
+
+None
+
+## Contact Us
+
+Telegram: @devclancy
+VKontakte: vk.com/devclancy
+Email: devclancy@gmail.com
