@@ -42,6 +42,13 @@ except:
 proxy5_list = open("socks5.txt")
 proxy5_line = proxy5_list.readlines()	
 
+check_file = os.path.exists("version.txt")
+
+if check_file == True:
+	pass
+if check_file == False:
+	print(Fore.RED + "[File] Version.txt not found!")
+
 ip = input(Fore.CYAN + "\nEnter IP: ")
 port = input(Fore.CYAN + "Enter PORT: ")
 threads = int(input(Fore.CYAN + "Enter THREADS: "))
