@@ -14,6 +14,6 @@ None
 
 ## Contact Us
 
-Telegram: @devclancy
-VKontakte: vk.com/devclancy
-Email: devclancy@gmail.com
+* Telegram: @devclancy
+* VKontakte: vk.com/devclancy
+* Email: devclancy@gmail.com
