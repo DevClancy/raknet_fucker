@@ -83,11 +83,11 @@ def attack():
 				info_print(sent, errors)
 
 if os.name == "nt":
-	print(Fore.GREEN + "Sent: " + sent + " " + "Errors: " + errors)
 	os.system("cls")
-else:
 	print(Fore.GREEN + "Sent: " + sent + " " + "Errors: " + errors)
+else:
 	os.system("clear")
+	print(Fore.GREEN + "Sent: " + sent + " " + "Errors: " + errors)
 												
 for o in range(threads):
 	main_thread = threading.Thread(target = attack)
