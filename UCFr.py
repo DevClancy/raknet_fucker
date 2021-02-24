@@ -43,9 +43,11 @@ port = input(Fore.CYAN + "Enter PORT: ")
 threads = int(input(Fore.CYAN + "Enter THREADS: "))
 
 def info_print(sent, errors):
-	try:
+	if os.name == "nt":
+		os.system("cls")
 		print(Fore.GREEN + "Sent: " + str(sent) + " " + Fore.RED + "Errors: " + str(errors))
-	except:
+	else:
+		os.system("clean")
 		print(Fore.GREEN + "Sent: " + str(sent) + " " + Fore.RED + "Errors: " + str(errors))
 
 def cleaner():
@@ -81,8 +83,10 @@ def attack():
 				info_print(sent, errors)
 
 if os.name == "nt":
+	print(Fore.GREEN + "Sent: " + sent + " " + "Errors: " + errors)
 	os.system("cls")
 else:
+	print(Fore.GREEN + "Sent: " + sent + " " + "Errors: " + errors)
 	os.system("clear")
 												
 for o in range(threads):
