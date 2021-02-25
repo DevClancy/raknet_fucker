@@ -4,6 +4,7 @@ Exploit for RakNet
 ## Todo
 
 * [x] Crash Packets
+* [ ] Timeout
 * [x] Proxy
 * [x] Multi-Threading
 * [ ] Custom Proxy
