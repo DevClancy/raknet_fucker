@@ -53,6 +53,9 @@ ip = input(Fore.CYAN + "\nEnter IP: ")
 port = input(Fore.CYAN + "Enter PORT: ")
 threads = int(input(Fore.CYAN + "Enter THREADS: "))
 
+def timeout():
+	pass
+
 def info_print(sent, errors):
 	if os.name == "nt":
 		os.system("cls")
