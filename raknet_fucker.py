@@ -30,18 +30,24 @@ messages = [message1, message2, message3, message4]
 
 init()
 
-try:
-	os.remove("socks5.txt")
-except:
+use_proxy = str(input("Use Deafault proxy list or custom? (d/c)"))
+
+if use_proxy == "d" or "D":
+	try:
+		os.remove("socks5.txt")
+	except:
+		pass
+
+	try:	
+		proxy5_download = wget.download("https://raw.githubusercontent.com/DevClancy/proxy/main/socks5.txt")
+	except:
+		print(Fore.RED + "[Proxy] Error!")  
+
+	proxy5_list = open("socks5.txt")
+	proxy5_line = proxy5_list.readlines()	
+
+if use_proxy == "c" or "C":
 	pass
-
-try:	
-	proxy5_download = wget.download("https://raw.githubusercontent.com/DevClancy/proxy/main/socks5.txt")
-except:
-	print(Fore.RED + "[Proxy] Error!")  
-
-proxy5_list = open("socks5.txt")
-proxy5_line = proxy5_list.readlines()	
 
 check_file = os.path.exists("version.txt")
 
