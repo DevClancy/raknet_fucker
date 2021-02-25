@@ -47,9 +47,9 @@ if use_proxy == "d" or "D":
 	proxy5_line = proxy5_list.readlines()
 	
 	if os.name == "nt":
-		os.system("clear")
-	else:
 		os.system("cls")
+	else:
+		os.system("clear")
 
 if use_proxy == "c" or "C":
 	proxy_custom = str(input(Fore.CYAN + "Enter proxy list (SOCKS5): "))
