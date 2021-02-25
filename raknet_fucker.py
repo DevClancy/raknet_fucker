@@ -30,7 +30,7 @@ messages = [message1, message2, message3, message4]
 
 init()
 
-use_proxy = str(input("Use Deafault proxy list or custom? (d/c)"))
+use_proxy = str(input(Fore.CYAN + "Use Deafault proxy list or custom? (d/c) "))
 
 if use_proxy == "d" or "D":
 	try:
@@ -44,10 +44,15 @@ if use_proxy == "d" or "D":
 		print(Fore.RED + "[Proxy] Error!")  
 
 	proxy5_list = open("socks5.txt")
-	proxy5_line = proxy5_list.readlines()	
+	proxy5_line = proxy5_list.readlines()
+	
+	if os.name == "nt":
+		os.system("clear")
+	else:
+		os.system("cls")
 
 if use_proxy == "c" or "C":
-	pass
+	proxy_custom = str(input(Fore.CYAN + "Enter proxy list (SOCKS5): "))
 
 check_file = os.path.exists("version.txt")
 
