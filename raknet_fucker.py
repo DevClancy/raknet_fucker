@@ -55,7 +55,7 @@ port = input(Fore.CYAN + "Enter PORT: ")
 threads = int(input(Fore.CYAN + "Enter THREADS: "))
 
 def timeout():
-	pass
+	time.sleep(1)
 
 def info_print(sent, errors):
 	if os.name == "nt":
@@ -90,6 +90,11 @@ def attack():
 				
 				sent += 1
 				
+				cleaner()
+				info_print(sent, errors)
+			except ConnectionResetError:
+				timeout()
+				errors += 1
 				cleaner()
 				info_print(sent, errors)
 			except:
