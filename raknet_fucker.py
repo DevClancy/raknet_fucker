@@ -32,7 +32,9 @@ init()
 
 use_proxy = str(input(Fore.CYAN + "Use Deafault proxy list or custom? (d/c) "))
 
-if use_proxy == "d" or "D":
+# fucking python
+
+if use_proxy == "d":
 	try:
 		os.remove("socks5.txt")
 	except:
@@ -51,9 +53,31 @@ if use_proxy == "d" or "D":
 	else:
 		os.system("clear")
 
-if use_proxy == "c" or "C":
+if use_proxy == "D":
+	try:
+		os.remove("socks5.txt")
+	except:
+		pass
+
+	try:	
+		proxy5_download = wget.download("https://raw.githubusercontent.com/DevClancy/proxy/main/socks5.txt")
+	except:
+		print(Fore.RED + "[Proxy] Error!")  
+
+	proxy5_list = open("socks5.txt")
+	proxy5_line = proxy5_list.readlines()
+	
+	if os.name == "nt":
+		os.system("cls")
+	else:
+		os.system("clear")		
+		
+if use_proxy == "c":
 	proxy_custom = str(input(Fore.CYAN + "Enter proxy list (SOCKS5): "))
 
+if use_proxy == "C":
+	proxy_custom = str(input(Fore.CYAN + "Enter proxy list (SOCKS5): "))	
+	
 check_file = os.path.exists("version.txt")
 
 if check_file == True:
