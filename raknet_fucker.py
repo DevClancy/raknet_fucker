@@ -69,6 +69,9 @@ threads = int(input(Fore.CYAN + "Enter THREADS: "))
 def timeout():
 	time.sleep(1)
 
+def updater():
+	pass
+
 def info_print(sent, errors):
 	if os.name == "nt":
 		os.system("cls")
