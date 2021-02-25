@@ -93,10 +93,10 @@ def attack():
 				cleaner()
 				info_print(sent, errors)
 			except ConnectionResetError:
-				timeout()
 				errors += 1
 				cleaner()
-				info_print(sent, errors)
+				info_print(sent, errors)				
+				timeout()
 			except:
 				errors += 1
 				cleaner()
