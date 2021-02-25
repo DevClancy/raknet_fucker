@@ -13,6 +13,7 @@ try:
 	from colorama import Fore, Back, Style
 except:
 	print(Fore.RED + "[Modules] Error from import!")
+	print(Fore.RED + "[Modules] Enter: pip install requirements.txt")
 	
 sent = 0
 errors = 0
