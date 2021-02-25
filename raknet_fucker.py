@@ -35,6 +35,11 @@ use_proxy = str(input(Fore.CYAN + "Use Deafault proxy list or custom? (d/c) "))
 # fucking python
 
 if use_proxy == "d" or "D":
+	if os.name == "nt":
+		os.system("cls")
+	else:
+		os.system("clear")
+		
 	try:
 		os.remove("socks5.txt")
 	except:
@@ -47,12 +52,6 @@ if use_proxy == "d" or "D":
 
 	proxy5_list = open("socks5.txt")
 	proxy5_line = proxy5_list.readlines()
-	
-	if os.name == "nt":
-		os.system("cls")
-	else:
-		os.system("clear")
-
 else:
 	proxy_custom = str(input(Fore.CYAN + "Enter proxy list (SOCKS5): "))
 	
