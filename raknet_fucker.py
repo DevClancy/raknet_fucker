@@ -71,7 +71,12 @@ def timeout():
 	time.sleep(1)
 
 def updater():
-	pass
+	version_site = requests.get('https://github.com/DevClancy/raknet_fucker/blob/main/version.txt')
+	if check_file == True:
+		version_file = open('version.txt')
+		version_text = version_file.read()
+		if str(version_text) not str(version_site):
+			pass
 
 def info_print(sent, errors):
 	if os.name == "nt":
