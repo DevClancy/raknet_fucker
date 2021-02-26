@@ -1,3 +1,4 @@
 wget
 colorama
 pysocks
+requests
