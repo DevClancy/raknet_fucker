@@ -31,6 +31,11 @@ messages = [message1, message2, message3, message4]
 
 init()
 
+if os.name == "nt":
+	os.system("cls")
+else:
+	os.system("clear")
+
 use_proxy = str(input(Fore.CYAN + "Use Deafault proxy list or custom? (d/c) "))
 
 # fucking python
@@ -75,8 +80,8 @@ def updater():
 	if check_file == True:
 		version_file = open('version.txt')
 		version_text = version_file.read()
-		if str(version_text) not str(version_site):
-			pass
+		#if str(version_text) not str(version_site):
+			#pass
 
 def info_print(sent, errors):
 	if os.name == "nt":
