@@ -77,8 +77,23 @@ def timeout():
 	time.sleep(1)
 
 def checker_server():
-	pass
-
+	try:
+		q = Query(ip, port)
+		server_data = q.query()
+		if server_data != None and server_data.SUCCESS:
+			pass
+		else:
+			if os.name == "nt":
+				os.system("cls")
+				print(Fore.GREEN + "Server is OFF!")
+				exit()
+			else:
+				os.system("clear")
+				print(Fore.GREEN + "Server is OFF!")
+				exit()
+	except:
+		pass
+	
 def updater():
 	version_site = requests.get('https://github.com/DevClancy/raknet_fucker/blob/main/version.txt')
 	if check_file == True:
