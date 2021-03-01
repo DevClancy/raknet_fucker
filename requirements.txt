@@ -2,4 +2,4 @@ wget
 colorama
 pysocks
 requests
-lxml
+py_mcpe_stats
