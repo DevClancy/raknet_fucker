@@ -2,3 +2,4 @@ wget
 colorama
 pysocks
 requests
+lxml
