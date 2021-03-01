@@ -10,7 +10,7 @@ try:
 	import socks
 	import wget
 	import requests
-	from lxml.html import fromstring
+	from py_mcpe_stats import Query
 	from colorama import init
 	from colorama import Fore, Back, Style
 except:
@@ -77,9 +77,7 @@ def timeout():
 	time.sleep(1)
 
 def checker_server():
-	text_parser = requests.get("https://minecraft-api.com/api/query/statut.php?ip=" + ip + "&port=" + port)
-	find_text = fromstring(text_parser.content)
-	#text = find_text.findtext("")
+	pass
 
 def updater():
 	version_site = requests.get('https://github.com/DevClancy/raknet_fucker/blob/main/version.txt')
