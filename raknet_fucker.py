@@ -76,6 +76,11 @@ threads = int(input(Fore.CYAN + "Enter THREADS: "))
 def timeout():
 	time.sleep(1)
 
+def checker_server():
+	text_parser = requests.get("https://minecraft-api.com/api/query/statut.php?ip=" + ip + "&port=" + port)
+	find_text = fromstring(text_parser.content)
+	#text = find_text.findtext("")
+
 def updater():
 	version_site = requests.get('https://github.com/DevClancy/raknet_fucker/blob/main/version.txt')
 	if check_file == True:
