@@ -146,6 +146,7 @@ def attack():
 				errors += 1
 				cleaner()
 				info_print(sent, errors)
+				checker_server()
 
 if os.name == "nt":
 	os.system("cls")
